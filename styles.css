@@ -1,0 +1,43 @@
+body {
+  margin-top: 60px; /* This margin just makes the text easier to read. You can remove it if you want since it can mess with your other styles. */
+}
+
+body::before {
+  content: "XS: <576px";
+  color: blue;
+  font-size: 2rem;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+@media (min-width: 576px) {
+  body::before {
+    content: "SM:576-767";
+  }
+}
+
+@media (min-width: 768px) {
+  body::before {
+    content: "MD:768-991";
+  }
+}
+
+@media (min-width: 992px) {
+  body::before {
+    content: "LG:992-1199";
+  }
+}
+
+@media (min-width: 1200px) {
+  body::before {
+    content: "XL:1200-1399";
+  }
+}
+
+@media (min-width: 1400px) {
+  body::before {
+    content: "XXL:1400 & above";
+  }
+}
